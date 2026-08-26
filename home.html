@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Coffee Co. | Artisanal Coffee & Bakery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        }
+        body {
+            background-color: #fdfaf6;
+            color: #2d2420;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2b1810;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #e5ba82;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #f5ede6;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+        }
+        nav a:hover, nav a.active {
+            color: #2b1810;
+            background-color: #e5ba82;
+        }
+        .hero {
+            background: linear-gradient(rgba(43, 24, 16, 0.75), rgba(43, 24, 16, 0.85)), radial-gradient(circle at center, #5d3a24 0%, #1b0e08 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 6rem 1.5rem;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #fce8cf;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 650px;
+            margin: 0 auto 2rem;
+            color: #e2d2c7;
+        }
+        .btn {
+            display: inline-block;
+            background: #c79257;
+            color: #1f110b;
+            padding: 0.85rem 1.8rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 4px 14px rgba(199, 146, 87, 0.4);
+            transition: all 0.2s ease-in-out;
+        }
+        .btn:hover {
+            background: #e5ba82;
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            background: transparent;
+            color: #e5ba82;
+            border: 2px solid #e5ba82;
+            margin-left: 0.8rem;
+            box-shadow: none;
+        }
+        .btn-outline:hover {
+            background: #e5ba82;
+            color: #2b1810;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: #2b1810;
+            margin-bottom: 0.5rem;
+        }
+        .section-title p {
+            color: #7d6b60;
+            font-size: 1.1rem;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: #ffffff;
+            border: 1px solid #eee2d7;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(78, 52, 46, 0.08);
+        }
+        .card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .card h3 {
+            font-size: 1.35rem;
+            color: #2b1810;
+            margin-bottom: 0.8rem;
+        }
+        .card p {
+            color: #6a5a51;
+            font-size: 0.95rem;
+        }
+        .banner {
+            background-color: #3b2216;
+            color: #fff;
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .banner-text h3 {
+            font-size: 1.8rem;
+            color: #f7d8b5;
+            margin-bottom: 0.5rem;
+        }
+        .banner-text p {
+            color: #d6c6bc;
+            font-size: 1.05rem;
+        }
+        footer {
+            background-color: #1b0e08;
+            color: #a8998f;
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 4rem;
+            border-top: 1px solid #362218;
+        }
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        footer a {
+            color: #e5ba82;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="home.html" class="logo">☕ Aura Coffee Co.</a>
+            <nav>
+                <ul>
+                    <li><a href="home.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services & Menu</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Handcrafted Coffee, Roasted with Soul</h1>
+        <p>Experience single-origin coffees, precision pour-overs, and fresh artisanal pastries in a warm, welcoming space.</p>
+        <div>
+            <a href="services.html" class="btn">Explore Menu</a>
+            <a href="contact.html" class="btn btn-outline">Visit Our Cafe</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>Why Choose Aura Coffee</h2>
+            <p>Every cup tells a story of ethical sourcing, roasting mastery, and community.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="card">
+                <div class="icon">🌱</div>
+                <h3>Ethically Sourced</h3>
+                <p>We partner directly with high-altitude family farms across Ethiopia, Colombia, and Guatemala ensuring fair wages.</p>
+            </div>
+            <div class="card">
+                <div class="icon">🔥</div>
+                <h3>Micro-Batch Roasting</h3>
+                <p>Roasted in-house every week in small batches to preserve delicate aroma profiles and peak flavor sweetness.</p>
+            </div>
+            <div class="card">
+                <div class="icon">🥐</div>
+                <h3>Fresh Daily Bakery</h3>
+                <p>Buttery croissants, cinnamon brioche, and vegan treats baked fresh every morning by our pastry chefs.</p>
+            </div>
+        </div>
+
+        <div class="banner">
+            <div class="banner-text">
+                <h3>Fresh Beans Delivered To Your Doorstep</h3>
+                <p>Join our Coffee Club subscription and receive curated freshly roasted bags every month.</p>
+            </div>
+            <a href="services.html" class="btn">Learn More</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Aura Coffee Co. All rights reserved.</p>
+        <p>124 Roaster Street, Artisan Quarter | Open Daily 7:00 AM - 7:00 PM</p>
+    </footer>
+
+</body>
+</html>

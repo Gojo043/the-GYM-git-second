@@ -3,10 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Services & Menu | Aura Coffee Co.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        }
+        body {
+            background-color: #fdfaf6;
+            color: #2d2420;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2b1810;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #e5ba82;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #f5ede6;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+        }
+        nav a:hover, nav a.active {
+            color: #2b1810;
+            background-color: #e5ba82;
+        }
+        .page-header {
+            background: linear-gradient(rgba(43, 24, 16, 0.8), rgba(43, 24, 16, 0.9)), radial-gradient(circle at center, #5d3a24 0%, #1b0e08 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 4.5rem 1.5rem;
+        }
+        .page-header h1 {
+            font-size: 2.8rem;
+            color: #fce8cf;
+            margin-bottom: 0.8rem;
+        }
+        .page-header p {
+            font-size: 1.15rem;
+            color: #d6c6bc;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .section-title h2 {
+            font-size: 2rem;
+            color: #2b1810;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        .menu-category {
+            background: #ffffff;
+            border: 1px solid #eee2d7;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+        .menu-category h3 {
+            font-size: 1.4rem;
+            color: #2b1810;
+            border-bottom: 2px solid #e5ba82;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px dashed #f0e6dc;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .item-info h4 {
+            font-size: 1.05rem;
+            color: #2b1810;
+            margin-bottom: 0.2rem;
+        }
+        .item-info p {
+            font-size: 0.85rem;
+            color: #7d6b60;
+        }
+        .item-price {
+            font-weight: 700;
+            color: #c79257;
+            font-size: 1.1rem;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background: #ffffff;
+            border: 1px solid #eee2d7;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            text-align: center;
+        }
+        .service-card .icon {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        .service-card h3 {
+            font-size: 1.3rem;
+            color: #2b1810;
+            margin-bottom: 0.8rem;
+        }
+        .service-card p {
+            color: #6a5a51;
+            font-size: 0.95rem;
+        }
+        footer {
+            background-color: #1b0e08;
+            color: #a8998f;
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 4rem;
+            border-top: 1px solid #362218;
+        }
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        footer a {
+            color: #e5ba82;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Updated Services</h1>
-    <p>Offering mobile and cloud solutions.</p>
+
+    <header>
+        <div class="nav-container">
+            <a href="home.html" class="logo">☕ Aura Coffee Co.</a>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html" class="active">Services & Menu</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <h1>Coffee Services & Cafe Menu</h1>
+        <p>From precision espresso extraction to private barista workshops and custom catering.</p>
+    </section>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>Cafe Favorites</h2>
+        </div>
+
+        <div class="menu-grid">
+            <div class="menu-category">
+                <h3>☕ Espresso Bar</h3>
+                <div class="menu-item">
+                    <div class="item-info">
+                        <h4>Double Espresso</h4>
+                        <p>Rich, balanced double shot of single-origin beans</p>
+                    </div>
+                    <div class="item-price">$3.50</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-info">
+                        <h4>Flat White / Latte</h4>
+                        <p>Velvety micro-foamed organic whole or oat milk</p>
+                    </div>
+                    <div class="item-price">$4.75</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-info">
+                        <h4>Honey Lavender Cappuccino</h4>
+                        <p>House-infused organic lavender syrup and local wildflower honey</p>
+                    </div>
+                    <div class="item-price">$5.50</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-info">
+                        <h4>Nitro Cold Brew</h4>
+                        <p>Steeped 20 hours, nitrogen-infused for a silky cascade</p>
+                    </div>
+                    <div class="item-price">$5.00</div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>🥐 Artisan Bakery</h3>
+                <div class="menu-item">
+                    <div class="item-info">
+                        <h4>Butter & Almond Croissants</h4>
+                        <p>Flaky French laminated pastry baked fresh at 6 AM</p>
+                    </div>
+                    <div class="item-price">$4.25</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-info">
+                        <h4>Cinnamon Cardamom Brioche</h4>
+                        <p>Swedish-style spiced brioche bun with pearl sugar</p>
+                    </div>
+                    <div class="item-price">$4.50</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-info">
+                        <h4>Avocado & Sourdough Toast</h4>
+                        <p>House sourdough, crushed avocado, chili flakes, sea salt</p>
+                    </div>
+                    <div class="item-price">$8.50</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Specialized Coffee Services</h2>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon">🎪</div>
+                <h3>Event & Wedding Catering</h3>
+                <p>Full mobile espresso bar setup with professional baristas serving signature drinks for weddings, corporate events, and parties.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🎓</div>
+                <h3>Barista & Cupping Workshops</h3>
+                <p>Hands-on weekend classes covering espresso theory, sensory tasting notes, pour-over methods, and latte art techniques.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">📦</div>
+                <h3>Monthly Bean Subscription</h3>
+                <p>Freshly roasted specialty beans shipped directly to your door every 2 or 4 weeks, with custom grind options.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Aura Coffee Co. All rights reserved.</p>
+        <p>124 Roaster Street, Artisan Quarter | Open Daily 7:00 AM - 7:00 PM</p>
+    </footer>
+
 </body>
 </html>
