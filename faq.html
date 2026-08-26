@@ -3,9 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Frequently Asked Questions | Aura Coffee Co.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        }
+        body {
+            background-color: #fdfaf6;
+            color: #2d2420;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2b1810;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #e5ba82;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #f5ede6;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+        }
+        nav a:hover, nav a.active {
+            color: #2b1810;
+            background-color: #e5ba82;
+        }
+        .page-header {
+            background: linear-gradient(rgba(43, 24, 16, 0.8), rgba(43, 24, 16, 0.9)), radial-gradient(circle at center, #5d3a24 0%, #1b0e08 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 4.5rem 1.5rem;
+        }
+        .page-header h1 {
+            font-size: 2.8rem;
+            color: #fce8cf;
+            margin-bottom: 0.8rem;
+        }
+        .page-header p {
+            font-size: 1.15rem;
+            color: #d6c6bc;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #eee2d7;
+            border-radius: 10px;
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+        .faq-question {
+            font-size: 1.25rem;
+            color: #2b1810;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .faq-question span {
+            color: #c79257;
+            font-size: 1.4rem;
+        }
+        .faq-answer {
+            color: #5d4d44;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        footer {
+            background-color: #1b0e08;
+            color: #a8998f;
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 4rem;
+            border-top: 1px solid #362218;
+        }
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        footer a {
+            color: #e5ba82;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>FAQ</h1>
+
+    <header>
+        <div class="nav-container">
+            <a href="home.html" class="logo">☕ Aura Coffee Co.</a>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services & Menu</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="faq.html" class="active">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <h1>Frequently Asked Questions</h1>
+        <p>Everything you need to know about our beans, roasting schedule, and cafe visits.</p>
+    </section>
+
+    <div class="container">
+        <div class="faq-item">
+            <div class="faq-question"><span>Q:</span> How fresh is the coffee you serve and sell?</div>
+            <div class="faq-answer">All our whole-bean bags are roasted in micro-batches twice every week. We stamp each bag with the exact roast date so you know you are brewing within the optimal 5-21 day flavor window.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question"><span>Q:</span> Do you offer non-dairy milk alternatives?</div>
+            <div class="faq-answer">Yes! We offer barista-grade Oatly Oat milk, Almond milk, and Coconut milk at no extra charge for all espresso and latte orders.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question"><span>Q:</span> Can I purchase whole beans ground for my home setup?</div>
+            <div class="faq-answer">Absolutely. We are happy to grind your bag in-store for French Press, Pour-Over (V60/Chemex), Aeropress, Moka Pot, or Home Espresso.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question"><span>Q:</span> How does the monthly coffee subscription work?</div>
+            <div class="faq-answer">You select your roast preference (Light, Medium, or Dark) and bag count. We automatically roast and ship fresh beans to your doorstep on your preferred schedule with free delivery. You can pause or cancel anytime.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question"><span>Q:</span> Do you host private events or catering?</div>
+            <div class="faq-answer">Yes! We provide full mobile barista carts for corporate events, weddings, and celebrations. Get in touch with us via our <a href="contact.html" style="color: #c79257; font-weight: 600;">Contact page</a> for a custom quote.</div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Aura Coffee Co. All rights reserved.</p>
+        <p>124 Roaster Street, Artisan Quarter | Open Daily 7:00 AM - 7:00 PM</p>
+    </footer>
+
 </body>
 </html>

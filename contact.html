@@ -3,9 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Us | Aura Coffee Co.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        }
+        body {
+            background-color: #fdfaf6;
+            color: #2d2420;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2b1810;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #e5ba82;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #f5ede6;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+        }
+        nav a:hover, nav a.active {
+            color: #2b1810;
+            background-color: #e5ba82;
+        }
+        .page-header {
+            background: linear-gradient(rgba(43, 24, 16, 0.8), rgba(43, 24, 16, 0.9)), radial-gradient(circle at center, #5d3a24 0%, #1b0e08 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 4.5rem 1.5rem;
+        }
+        .page-header h1 {
+            font-size: 2.8rem;
+            color: #fce8cf;
+            margin-bottom: 0.8rem;
+        }
+        .page-header p {
+            font-size: 1.15rem;
+            color: #d6c6bc;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+        }
+        .info-card {
+            background: #ffffff;
+            border: 1px solid #eee2d7;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+        .info-card h2 {
+            font-size: 1.6rem;
+            color: #2b1810;
+            margin-bottom: 1.5rem;
+        }
+        .info-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .info-icon {
+            font-size: 1.5rem;
+        }
+        .info-text h4 {
+            color: #2b1810;
+            font-size: 1.05rem;
+            margin-bottom: 0.2rem;
+        }
+        .info-text p {
+            color: #6a5a51;
+            font-size: 0.95rem;
+        }
+        .contact-form {
+            background: #ffffff;
+            border: 1px solid #eee2d7;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+        .contact-form h2 {
+            font-size: 1.6rem;
+            color: #2b1810;
+            margin-bottom: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+            color: #3b2216;
+            font-size: 0.9rem;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #d9cbbf;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            background-color: #faf7f4;
+        }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            outline: none;
+            border-color: #c79257;
+            background-color: #ffffff;
+        }
+        .btn-submit {
+            width: 100%;
+            background: #c79257;
+            color: #1f110b;
+            border: none;
+            padding: 0.9rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn-submit:hover {
+            background: #e5ba82;
+        }
+        footer {
+            background-color: #1b0e08;
+            color: #a8998f;
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 4rem;
+            border-top: 1px solid #362218;
+        }
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        footer a {
+            color: #e5ba82;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Contact us</h1>
+
+    <header>
+        <div class="nav-container">
+            <a href="home.html" class="logo">☕ Aura Coffee Co.</a>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services & Menu</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <h1>Visit Us & Get in Touch</h1>
+        <p>Drop by our flagship cafe or send us a note for catering and wholesale inquiries.</p>
+    </section>
+
+    <div class="container">
+        <div class="contact-grid">
+            <div class="info-card">
+                <h2>Cafe Information</h2>
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div class="info-text">
+                        <h4>Address</h4>
+                        <p>124 Roaster Street, Artisan Quarter, City Center</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">🕒</div>
+                    <div class="info-text">
+                        <h4>Opening Hours</h4>
+                        <p>Monday - Friday: 7:00 AM - 7:00 PM<br>Saturday - Sunday: 8:00 AM - 8:00 PM</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">📞</div>
+                    <div class="info-text">
+                        <h4>Phone & Email</h4>
+                        <p>+1 (555) 321-BREW<br>hello@auracoffee.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you for reaching out to Aura Coffee! We will get back to you shortly.');">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required placeholder="Jane Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="jane@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Inquiry Type</label>
+                        <select id="subject">
+                            <option>General Question</option>
+                            <option>Event Catering</option>
+                            <option>Wholesale Coffee Beans</option>
+                            <option>Barista Workshop Booking</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" required placeholder="Tell us how we can help you..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Aura Coffee Co. All rights reserved.</p>
+        <p>124 Roaster Street, Artisan Quarter | Open Daily 7:00 AM - 7:00 PM</p>
+    </footer>
+
 </body>
 </html>

@@ -3,9 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Our Team | Aura Coffee Co.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        }
+        body {
+            background-color: #fdfaf6;
+            color: #2d2420;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2b1810;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #e5ba82;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #f5ede6;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+        }
+        nav a:hover, nav a.active {
+            color: #2b1810;
+            background-color: #e5ba82;
+        }
+        .page-header {
+            background: linear-gradient(rgba(43, 24, 16, 0.8), rgba(43, 24, 16, 0.9)), radial-gradient(circle at center, #5d3a24 0%, #1b0e08 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 4.5rem 1.5rem;
+        }
+        .page-header h1 {
+            font-size: 2.8rem;
+            color: #fce8cf;
+            margin-bottom: 0.8rem;
+        }
+        .page-header p {
+            font-size: 1.15rem;
+            color: #d6c6bc;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .team-card {
+            background: #ffffff;
+            border: 1px solid #eee2d7;
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: transform 0.2s;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+        .avatar {
+            width: 85px;
+            height: 85px;
+            background: #f4e8dc;
+            border: 3px solid #e5ba82;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            margin: 0 auto 1.2rem;
+        }
+        .team-card h3 {
+            font-size: 1.25rem;
+            color: #2b1810;
+            margin-bottom: 0.3rem;
+        }
+        .role {
+            display: inline-block;
+            background: #fdf2e4;
+            color: #9d6429;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
+        .team-card p {
+            color: #6a5a51;
+            font-size: 0.9rem;
+        }
+        footer {
+            background-color: #1b0e08;
+            color: #a8998f;
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 4rem;
+            border-top: 1px solid #362218;
+        }
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        footer a {
+            color: #e5ba82;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Meet our team</h1>
+
+    <header>
+        <div class="nav-container">
+            <a href="home.html" class="logo">☕ Aura Coffee Co.</a>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services & Menu</a></li>
+                    <li><a href="team.html" class="active">Our Team</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <h1>Meet the Coffee Artisans</h1>
+        <p>The passionate roasters, baristas, and bakers behind your daily brew.</p>
+    </section>
+
+    <div class="container">
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="avatar">👨‍🍳</div>
+                <h3>Marcus Vance</h3>
+                <span class="role">Founder & Master Roaster</span>
+                <p>12+ years perfecting temperature curves and developing roast profiles to unlock delicate bean aromas.</p>
+            </div>
+
+            <div class="team-card">
+                <div class="avatar">👩‍🎨</div>
+                <h3>Elena Rostova</h3>
+                <span class="role">Head Barista & Latte Artist</span>
+                <p>National Latte Art finalist who curates our signature seasonal beverage creations and milk texturing.</p>
+            </div>
+
+            <div class="team-card">
+                <div class="avatar">☕</div>
+                <h3>Samuel Kiptoo</h3>
+                <span class="role">Q-Grader & Bean Sourcing</span>
+                <p>Certified sensory judge who travels to origin farms each season to inspect crops and cupping lots.</p>
+            </div>
+
+            <div class="team-card">
+                <div class="avatar">🥐</div>
+                <h3>Maya Lin</h3>
+                <span class="role">Pastry Chef</span>
+                <p>Culinary school graduate crafting fresh French pastries and artisan sourdough loaves every morning.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Aura Coffee Co. All rights reserved.</p>
+        <p>124 Roaster Street, Artisan Quarter | Open Daily 7:00 AM - 7:00 PM</p>
+    </footer>
+
 </body>
 </html>
