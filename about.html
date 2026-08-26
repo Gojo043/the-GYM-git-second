@@ -3,9 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About Us | Aura Coffee Co.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        }
+        body {
+            background-color: #fdfaf6;
+            color: #2d2420;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2b1810;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #e5ba82;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #f5ede6;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+        }
+        nav a:hover, nav a.active {
+            color: #2b1810;
+            background-color: #e5ba82;
+        }
+        .page-header {
+            background: linear-gradient(rgba(43, 24, 16, 0.8), rgba(43, 24, 16, 0.9)), radial-gradient(circle at center, #5d3a24 0%, #1b0e08 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 4.5rem 1.5rem;
+        }
+        .page-header h1 {
+            font-size: 2.8rem;
+            color: #fce8cf;
+            margin-bottom: 0.8rem;
+        }
+        .page-header p {
+            font-size: 1.15rem;
+            color: #d6c6bc;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+        .about-story {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+        .story-content h2 {
+            font-size: 2rem;
+            color: #2b1810;
+            margin-bottom: 1rem;
+        }
+        .story-content p {
+            color: #5d4d44;
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+        .story-highlight {
+            background: #fff;
+            border-left: 4px solid #c79257;
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .value-card {
+            background: #ffffff;
+            border: 1px solid #eee2d7;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+        .value-card .num {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #c79257;
+            margin-bottom: 0.5rem;
+        }
+        .value-card h3 {
+            font-size: 1.25rem;
+            color: #2b1810;
+            margin-bottom: 0.6rem;
+        }
+        .value-card p {
+            color: #6a5a51;
+            font-size: 0.95rem;
+        }
+        footer {
+            background-color: #1b0e08;
+            color: #a8998f;
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 4rem;
+            border-top: 1px solid #362218;
+        }
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        footer a {
+            color: #e5ba82;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>About us</h1>
+
+    <header>
+        <div class="nav-container">
+            <a href="home.html" class="logo">☕ Aura Coffee Co.</a>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="services.html">Services & Menu</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <h1>Our Story & Philosophy</h1>
+        <p>Crafting more than just coffee — fostering community, craft, and sustainability in every cup.</p>
+    </section>
+
+    <div class="container">
+        <div class="about-story">
+            <div class="story-content">
+                <h2>Born From a Love of the Bean</h2>
+                <p>Founded in 2021, Aura Coffee Co. started with a single vintage roaster and a dream: to bring specialty, micro-lot coffees directly from passionate growers to coffee enthusiasts.</p>
+                <p>We believe great coffee isn't rushed. From hand-selecting harvest lots in volcanic soil regions to profiling our roasts second-by-second, we honor the craft of coffee making.</p>
+            </div>
+            <div class="story-highlight">
+                <h3 style="color: #2b1810; margin-bottom: 0.5rem;">Our Mission</h3>
+                <p style="color: #5d4d44; font-size: 1rem; margin: 0;">"To elevate daily rituals through exceptional artisanal coffee, sustainable agricultural practices, and warm community spaces."</p>
+            </div>
+        </div>
+
+        <h2 style="font-size: 2rem; color: #2b1810; text-align: center; margin-top: 2rem;">Our Core Pillars</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="num">01</div>
+                <h3>Direct Farm Trade</h3>
+                <p>100% of our green beans are directly sourced, paying up to 40% above fair-trade market rates to local farmers.</p>
+            </div>
+            <div class="value-card">
+                <div class="num">02</div>
+                <h3>Artisan Roasting</h3>
+                <p>We profile each bean origin individually to highlight its unique flavor terroir — floral, fruity, or chocolatey notes.</p>
+            </div>
+            <div class="value-card">
+                <div class="num">03</div>
+                <h3>Zero Waste Goal</h3>
+                <p>All our takeaway cups, lids, and bags are 100% biodegradable, and coffee grounds are donated to community gardens.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Aura Coffee Co. All rights reserved.</p>
+        <p>124 Roaster Street, Artisan Quarter | Open Daily 7:00 AM - 7:00 PM</p>
+    </footer>
+
 </body>
 </html>
