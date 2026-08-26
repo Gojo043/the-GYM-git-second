@@ -85,8 +85,9 @@
         }
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 2rem;
+            margin-bottom: 4rem;
         }
         .team-card {
             background: #ffffff;
@@ -95,25 +96,29 @@
             padding: 2rem 1.5rem;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-            transition: transform 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .team-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(78, 52, 46, 0.08);
         }
         .avatar {
-            width: 85px;
-            height: 85px;
+            width: 90px;
+            height: 90px;
             background: #f4e8dc;
             border: 3px solid #e5ba82;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             margin: 0 auto 1.2rem;
         }
         .team-card h3 {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             color: #2b1810;
             margin-bottom: 0.3rem;
         }
@@ -125,11 +130,67 @@
             font-weight: 700;
             padding: 0.25rem 0.75rem;
             border-radius: 20px;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
+        }
+        .specialty {
+            font-size: 0.8rem;
+            color: #8c7365;
+            font-style: italic;
+            margin-bottom: 0.8rem;
         }
         .team-card p {
             color: #6a5a51;
             font-size: 0.9rem;
+            margin-bottom: 1.2rem;
+        }
+        .badge-list {
+            display: flex;
+            justify-content: center;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+            margin-top: auto;
+        }
+        .badge {
+            background: #f5ece3;
+            color: #594236;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+        .join-section {
+            background-color: #3b2216;
+            color: #ffffff;
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        .join-section h2 {
+            font-size: 2rem;
+            color: #f7d8b5;
+            margin-bottom: 0.8rem;
+        }
+        .join-section p {
+            color: #d6c6bc;
+            font-size: 1.05rem;
+            max-width: 650px;
+            margin: 0 auto 1.5rem;
+        }
+        .btn {
+            display: inline-block;
+            background: #c79257;
+            color: #1f110b;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+        .btn:hover {
+            background: #e5ba82;
+            transform: scale(1.03);
         }
         footer {
             background-color: #1b0e08;
@@ -175,32 +236,66 @@
     <div class="container">
         <div class="team-grid">
             <div class="team-card">
-                <div class="avatar">👨‍🍳</div>
-                <h3>Marcus Vance</h3>
-                <span class="role">Founder & Master Roaster</span>
-                <p>12+ years perfecting temperature curves and developing roast profiles to unlock delicate bean aromas.</p>
+                <div>
+                    <div class="avatar">👨‍🍳</div>
+                    <h3>Marcus Vance</h3>
+                    <span class="role">Founder & Master Roaster</span>
+                    <div class="specialty">Expertise: Light Roasts & Micro-Lots</div>
+                    <p>12+ years perfecting temperature curves and developing roast profiles to unlock delicate bean aromas.</p>
+                </div>
+                <div class="badge-list">
+                    <span class="badge">SCA Roaster L3</span>
+                    <span class="badge">12 Yrs Exp</span>
+                </div>
             </div>
 
             <div class="team-card">
-                <div class="avatar">👩‍🎨</div>
-                <h3>Elena Rostova</h3>
-                <span class="role">Head Barista & Latte Artist</span>
-                <p>National Latte Art finalist who curates our signature seasonal beverage creations and milk texturing.</p>
+                <div>
+                    <div class="avatar">👩‍🎨</div>
+                    <h3>Elena Rostova</h3>
+                    <span class="role">Head Barista & Latte Artist</span>
+                    <div class="specialty">Expertise: Espresso Extraction & Milk Foam</div>
+                    <p>National Latte Art finalist who curates our signature seasonal beverage creations and milk texturing.</p>
+                </div>
+                <div class="badge-list">
+                    <span class="badge">Barista Champion</span>
+                    <span class="badge">Latte Art Lead</span>
+                </div>
             </div>
 
             <div class="team-card">
-                <div class="avatar">☕</div>
-                <h3>Samuel Kiptoo</h3>
-                <span class="role">Q-Grader & Bean Sourcing</span>
-                <p>Certified sensory judge who travels to origin farms each season to inspect crops and cupping lots.</p>
+                <div>
+                    <div class="avatar">☕</div>
+                    <h3>Samuel Kiptoo</h3>
+                    <span class="role">Q-Grader & Bean Sourcing</span>
+                    <div class="specialty">Expertise: Sensory Cupping & Direct Trade</div>
+                    <p>Certified sensory judge who travels to origin farms each season to inspect crops and cupping lots.</p>
+                </div>
+                <div class="badge-list">
+                    <span class="badge">Certified Q-Grader</span>
+                    <span class="badge">Origin Buyer</span>
+                </div>
             </div>
 
             <div class="team-card">
-                <div class="avatar">🥐</div>
-                <h3>Maya Lin</h3>
-                <span class="role">Pastry Chef</span>
-                <p>Culinary school graduate crafting fresh French pastries and artisan sourdough loaves every morning.</p>
+                <div>
+                    <div class="avatar">🥐</div>
+                    <h3>Maya Lin</h3>
+                    <span class="role">Pastry Chef</span>
+                    <div class="specialty">Expertise: Laminated Dough & Brioche</div>
+                    <p>Culinary school graduate crafting fresh French pastries and artisan sourdough loaves every morning.</p>
+                </div>
+                <div class="badge-list">
+                    <span class="badge">Le Cordon Bleu</span>
+                    <span class="badge">Head Baker</span>
+                </div>
             </div>
+        </div>
+
+        <div class="join-section">
+            <h2>Join the Aura Coffee Family</h2>
+            <p>We are always looking for passionate baristas, roasters, and culinary creators who care deeply about coffee craft and hospitality.</p>
+            <a href="contact.html" class="btn">Apply to Work With Us</a>
         </div>
     </div>
 
